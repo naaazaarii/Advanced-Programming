@@ -3,10 +3,12 @@
 
 ## dictionary exercise 1: Below are the two lists convert it into the dictionary
 
-```python
-keys = ['Ten', 'Twenty', 'Thirty']
-values = [10, 20, 30]
-```
+thisdict = {
+  "ten": "10",
+  "twenty": "20",
+  "thirtyr":30
+}
+print(thisdict)
 
 **Expected output:**
 
@@ -16,10 +18,15 @@ values = [10, 20, 30]
 
 ## dictionary exercise 2: Merge following two Python dictionaries into one
 
-```python
+
 dict1 = {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
+
 dict2 = {'Thirty': 30, 'Fourty': 40, 'Fifty': 50}
-```
+
+newdict={
+"dict1" : dict1,
+"dict2" : dict2
+}
 
 **Expected output:**
 
@@ -29,19 +36,24 @@ dict2 = {'Thirty': 30, 'Fourty': 40, 'Fifty': 50}
 
 ## dictionary exercise 3: Access the value of key ‘history’
 
-```python
-sampleDict = { 
-    "class":{ 
+directDict = { 
+    "class":{
         "student":{ 
-            "name":"Mike",
+            "name": "Mike",
+            }
             "marks":{ 
             "physics":70,
             "history":80
-            }
+            
         }
     }
 }
-```
+
+
+x = directDict.get("history")
+
+print(x)
+
 
 **Expected output:**
 80
@@ -51,30 +63,29 @@ sampleDict = {
 
 **Given**:
 
-```python
 employees = ['Kelly', 'Emma', 'John']
 defaults = {"designation": 'Application Developer', "salary": 8000}
-```
+Application Developer= for x in employees
+print(default)
 
 ## dictionary exercise 5: Create a new dictionary by extracting the following keys from a given dictionary
 
 **Given dictionary**:
 
-```python
-sampleDict = {
+t = {
     "name": "Kelly",
     "age":25,
     "salary": 8000,
     "city": "New york"
     
 }
-```
+ 
+ x = sampleDic.setdefault("name")
+ y = sampleDic.setdefault("salary") 
 
-**Keys to extract**
+print(x)
+print(y)
 
-```python
-keys = ["name", "salary"]
-```
 
 **Expected output:**
 
@@ -86,7 +97,7 @@ keys = ["name", "salary"]
 
 **Given**:
 
-```python
+
 sampleDict = {
     "name": "Kelly",
     "age":25,
@@ -94,11 +105,9 @@ sampleDict = {
     "city": "New york"
     
 }
-```
-
-```python
-keysToRemove = ["name", "salary"]
-```
+sampleDict.pop("salary")
+sampleDict.pop(""name"")
+print(thisdict)
 
 **Expected output:**
 
@@ -108,9 +117,10 @@ keysToRemove = ["name", "salary"]
 
 ## dictionary exercise 7: Check if a value *200* exists in a dictionary
 
-```python
 sampleDict = {'a': 100, 'b': 200, 'c': 300}
-```
+for x in sampleDict:
+if x==200
+print("true")
 
 **Expected output:**
 
@@ -120,7 +130,7 @@ sampleDict = {'a': 100, 'b': 200, 'c': 300}
 
 ## dictionary exercise 8: Rename key `city` to `location` in the following dictionary
 
-```python
+
 sampleDict = {
     "name": "Kelly",
     "age":25,
@@ -128,9 +138,9 @@ sampleDict = {
     "city": "New york"
 }
 
-sampleDict['location'] = sampleDict.pop('city')
+sampleDict['city'] = sampleDict.update('location')
 print(sampleDict)
-```
+
 
 **Expected output:**
 
@@ -146,27 +156,28 @@ print(sampleDict)
 
 ## dictionary exercise 9: Get the key corresponding to the minimum value from the following dictionary
 
-```python
+
 sampleDict = {
     'Physics': 82,
     'Math': 65,
     'history': 75
 }
-```
-
+for x in sampleDict:
+if x>0:
+x=x
 **Expected output:**
 Math
 
 
 ## dictionary exercise 10: Given a Python dictionary, Change Brad’s salary to 8500
 
-```python
 sampleDict = {
         'emp1': {'name': 'Jhon', 'salary': 7500},
         'emp2': {'name': 'Emma', 'salary': 8000},
         'emp3': {'name': 'Brad', 'salary': 6500}
 }
-```
+
+emp3['salary'] = 8500
 
 **Expected output:**
 
